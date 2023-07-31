@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2.5rem;
+    /* background-color: aqua; */
+}
+
+.notifbox {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title {
+    font-size: 1.26rem;
+    font-weight: var(--fontweight800);
+    color: var(--very-dark-blue);
+}
+
+.notifications {
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 7px;
+    padding: .1rem .7rem;
+    height: 1.6rem;
+    width: 2rem;
+}
+
+.markall {
+    font-size: .88rem;
+    font-weight: var(--fontweight500);
+    color: var(--dark-grayish-blue);
+}
+
+.markall:hover {
+    cursor: pointer;
+    color: var(--blue);
+}

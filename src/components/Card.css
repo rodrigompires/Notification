@@ -1,0 +1,244 @@
+.card {
+    width: 100%; 
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem; 
+    border-radius: 7px;
+    padding: .8rem .7rem .8rem 0rem;
+    gap: .69rem;
+    cursor: pointer;       
+}
+
+.unread {
+    background-color: var(--very-light-grayish-blue);
+}
+
+.unread .info::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    background-color: var(--red);
+    border-radius: 50%;
+    margin-left: .3rem;
+}
+
+.avatar {
+    width: 2.5rem;
+    margin-left: 1rem;
+}
+
+.name {
+    font-weight: var(--fontweight800);
+    font-size: .88rem;
+    color: var(--very-dark-blue);
+    margin-left: .60rem;
+
+}
+
+.name:hover {
+    cursor: pointer;
+    color: var(--blue);
+}
+
+.action {
+    margin-left: .23rem;
+    font-size: .88rem;
+    color: var(--dark-grayish-blue);
+}
+
+
+.info {
+    margin-left: .5rem;
+    font-weight: var(--fontweight800);
+    font-size: .865rem;
+    color: var(--dark-grayish-blue);
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.info:hover {
+    cursor: pointer;
+    color: var(--blue);
+}
+
+.date {
+    font-size: .86rem;
+    color: var(--grayish-blue);
+    display: inline-block;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    margin-right: .8rem;
+    margin-bottom: 1.4rem;
+}
+
+.teste {
+    display: flex;
+    flex-direction: column;
+}
+.text {
+    font-size: .87rem;
+    color: var(--dark-grayish-blue);
+    padding: 1rem;
+    border: 1px solid var(--light-grayish-blue-2);
+    border-radius: .3rem;
+    margin: 0 0 0 4.2rem;
+    
+}
+
+.text:hover {
+    cursor: pointer;
+    background-color: var(--light-grayish-blue-1);
+    border: 1px solid var(--light-grayish-blue-1);
+}
+
+.avatarchess {
+    width: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 7px;   
+}
+
+.avatarchess:hover {
+    cursor: pointer;
+    border: 2px solid var(--light-grayish-blue-1);
+}
+
+.card:hover .box {
+    filter: blur(1.01px);
+}
+
+.card .box:hover {
+    animation: cardbox 1s linear infinite;
+    filter: blur(0px);
+}
+
+
+@keyframes cardbox {
+    0% {
+        transform: scale(1);
+
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+.loading {
+    width: 5rem;
+    margin: 0 auto;
+}
+
+
+
+
+@media (min-width:600px) {
+    body {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        width: 45.75rem;
+        height: 100%;
+        border-radius: 18px;
+        padding: 0rem 2rem 0rem 2rem;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header {
+        /* background-color: aqua; */
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .notifbox {
+        gap: .78rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        font-weight: var(--fontweight800);
+        color: var(--very-dark-blue);
+    }
+
+    .markall {
+        font-size: 1rem;
+    }
+
+
+    .card {
+        position: relative;   
+    }
+
+    .box {
+        padding: 1.2rem 0 1.2rem 0;
+        margin-top: .5rem; 
+    }
+
+    .p {
+        margin-left: .55rem;
+    }
+
+    .action {
+        font-size: 1rem;
+    }
+
+    .info {
+        font-size: 1rem;
+    }
+
+    
+    .name {
+        font-size: 1rem;
+    }
+
+    .date {
+        margin-left: .55rem;
+        font-size: .97rem;
+    }
+    .text {
+        font-size: 1rem;
+        padding: 1rem;
+        margin: 0 .7rem 0 4.9rem;
+    }
+
+    .avatarchess {
+        position: absolute;
+        right: 1.5rem;
+        width: 3rem;
+    }
+
+    .avatar {
+        width: 2.8rem;
+    }
+}
+
+
+.msg {
+    opacity: 0;
+    transform: translateY(60px);
+    pointer-events: none;
+    max-height: 0px;
+}
+
+.msg.show {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+    max-height: 200px;
+}
